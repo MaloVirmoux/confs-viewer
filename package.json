@@ -1,22 +1,52 @@
 {
+  "type": "commonjs",
   "name": "confs-viewer",
-  "displayName": "confs-viewer",
-  "description": "Allows to preview yaml conf files according to the current environment",
+  "displayName": "Confs Viewer",
+  "description": "Allows to preview confs from a multi-env tree structure",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.84.0"
   },
   "categories": [
-    "Other"
+    "Visualization"
   ],
-  "activationEvents": [],
-  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:confs-viewer.confsViewerTest",
+    "onView:confs-viewer-sidebar"
+  ],
+  "main": "./src/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "confs-viewer.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "confs-viewer.confsViewerTest",
+        "title": "Confs Loader Test"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "confs-viewer",
+          "title": "Confs Viewer",
+          "icon": "media/symbol-key.svg"
+        }
+      ]
+    },
+    "views": {
+      "confs-viewer": [
+        {
+          "type": "webview",
+          "id": "confs-viewer-sidebar",
+          "name": "Confs Viewer",
+          "icon": "media/symbol-key.svg",
+          "contextualTitle": "Confs Viewer"
+        }
+      ]
+    }
   },
+  "permissions": [
+    "activeEditor",
+    "webview"
+  ],
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",

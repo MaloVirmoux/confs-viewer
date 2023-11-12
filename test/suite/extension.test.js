@@ -1,8 +1,9 @@
-const assert = require('assert');
+import * as assert from "assert"
+
+import * as vscode from "vscode"
 
 // You can import and use all API from the 'vscode' module
 // as well as import your extension to test it
-const vscode = require('vscode');
 // const myExtension = require('../extension');
 
 suite('Extension Test Suite', () => {
