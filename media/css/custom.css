@@ -1,0 +1,44 @@
+:root {
+    --vscode-button-unselected-foreground: rgba(255, 255, 255, 0.4);
+    --vscode-button-unselected-background: rgb(51, 51, 51);
+    --vscode-button-selected-foreground: rgba(255, 255, 255, 1);
+    --vscode-button-selected-background: #0e639c;
+    --vscode-button-hover: #1177bb;
+}
+
+#env-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-label {
+    display: flex;
+    box-sizing: border-box;
+    padding: 4px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    line-height: 18px;
+    margin: 5px 0 5px 0;
+    color: var(--vscode-button-unselected-foreground);
+    background-color: var(--vscode-button-unselected-background);
+}
+
+.env-button-label {
+    width: 30%;
+}
+
+.file-button-label {
+    width: 100%;
+}
+
+.button-input:checked + .button-label {
+    color: var(--vscode-button-selected-foreground);
+    background-color: var(--vscode-button-selected-background);
+}
+
+.button-input:hover + .button-label, .button-input:checked:hover + .button-label {
+    background-color: var(--vscode-button-hover);
+}

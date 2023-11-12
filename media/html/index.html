@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--
+            Use a content security policy to only allow loading images from https or from our extension directory,
+            and only allow scripts that have a specific nonce.
+            -->
+        <meta http-equiv="Content-Security-Policy" content="img-src https: data:; style-src 'unsafe-inline' ${webview.cspSource}; script-src;">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="${styleResetUri}" rel="stylesheet">
+        <link href="${styleVSCodeUri}" rel="stylesheet">
+        <link href="${styleCustomUri}" rel="stylesheet">
+    </head>
+    <body>
+        <div>Environment :</div>
+        <form action="" method="get" id="env-form">
+            <input type="radio" name="env" id="dev-radio" class="button-input" style="display: none;" checked/><label for="dev-radio" class="button-label env-button-label">DEV</label>
+            <input type="radio" name="env" id="ppd-radio" class="button-input" style="display: none;"/><label for="ppd-radio" class="button-label env-button-label">PPD</label>
+            <input type="radio" name="env" id="prd-radio" class="button-input" style="display: none;"/><label for="prd-radio" class="button-label env-button-label">PRD</label>
+        </form>
+        <div>Files to process :</div>
+        <form action="" method="get", id="files-form">
+            <input type="checkbox" name="file-a" id="conf-a-checkbox" class="button-input" style="display: none;" checked><label for="conf-a-checkbox" class="button-label file-button-label">file_a</label>
+            <input type="checkbox" name="file-b" id="conf-b-checkbox" class="button-input" style="display: none;" checked><label for="conf-b-checkbox" class="button-label file-button-label">file_b</label>
+            <input type="checkbox" name="file-c" id="conf-c-checkbox" class="button-input" style="display: none;" checked><label for="conf-c-checkbox" class="button-label file-button-label">file_c</label>
+        </form>
+    </body>
+</html>

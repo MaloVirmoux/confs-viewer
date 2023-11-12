@@ -27,7 +27,7 @@
         {
           "id": "confs-viewer",
           "title": "Confs Viewer",
-          "icon": "media/symbol-key.svg"
+          "icon": "media/svg/symbol-key.svg"
         }
       ]
     },
@@ -37,7 +37,7 @@
           "type": "webview",
           "id": "confs-viewer-sidebar",
           "name": "Confs Viewer",
-          "icon": "media/symbol-key.svg",
+          "icon": "media/svg/symbol-key.svg",
           "contextualTitle": "Confs Viewer"
         }
       ]
